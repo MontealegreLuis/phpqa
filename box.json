@@ -1,0 +1,26 @@
+{
+    "alias": "phpqa.phar",
+    "chmod": "0755",
+    "directories": [
+        "config",
+        "src",
+        "bin"
+    ],
+    "files": [
+        "phpqa.yml",
+        "bin/phpqa.php",
+        "config/.php_cs",
+        "config/phpunit.xml.dist",
+        "vendor/autoload.php"
+    ],
+    "finder": [
+        {
+            "name": "/(\\.php|\\.json|\\.yml)$/",
+            "exclude": ["Tests","tests", "docs"],
+            "in": "vendor"
+        }
+    ],
+    "main": "bin/phpqa.php",
+    "output": "phpqa.phar",
+    "stub": true
+}
